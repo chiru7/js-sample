@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>the button</button>
+  <div>the div</div>
+  <script>
+    // loadイベント追加 その1
+    window.addEventListener('load', function(e) {
+      console.log('load-1');
+    }, false);
+
+    // loadイベント追加 その2
+    window.addEventListener('load', function(e) {
+      console.log('load-2');
+    }, false);
+
+    // clickイベント追加 その1
+    document.addEventListener('click', function(e) {
+      console.log('tagName %s', e.target.tagName);
+      if (e.target.tagName.toUpperCase() === 'BUTTON') {
+        console.log('tagName is button');
+      }
+      console.log('click-1');
+    }, false);
+
+    // clickイベント追加 その2
+    document.addEventListener('click', function(e) {
+      console.log('click-2');
+    }, false);
+  </script>
+</body>
+
+</html>
